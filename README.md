@@ -2,6 +2,15 @@
 
 Donation Tracker を Docker で起動するためのプロジェクトです.
 
+## Checkout submodule
+
+Donation Tracker 本体を submodule として取得します.
+
+```sh
+git submodule init
+git submodule update
+```
+
 ## For production
 
 `.env` ファイルを用意して, `docker-compose` で起動します.
