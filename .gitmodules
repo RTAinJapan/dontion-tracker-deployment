@@ -1,0 +1,3 @@
+[submodule "donation-tracker"]
+	path = donation-tracker
+	url = https://github.com/RTAinJapan/donation-tracker.git

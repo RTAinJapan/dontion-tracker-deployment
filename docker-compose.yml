@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  gunicorn:
+    image: tracker-app
+    build:
+      context: .
+      target: tracker-gunicorn
+    restart: always
+    ports:
+      - 8001:8000
+  daphne:
+    image: tracker-channels
+    build:
+      context: .
+      target: tracker-daphne
+    restart: always
+    ports:
+      - 8002:8000
