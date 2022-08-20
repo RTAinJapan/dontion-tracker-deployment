@@ -20,7 +20,7 @@ cp .env.production .env
 ```
 
 ```sh
-docker-compose up -f docker-compose.yml --build -d
+docker-compose -f "docker-compose.yml"  up -d --build
 ```
 
 ## For development
@@ -34,7 +34,7 @@ cp .env.development .env
 .env の `APP_SECRET` には https://djecrety.ir/ などで生成した文字列を設定してください.
 
 ```sh
-docker-compose up -f docker-compose.development.yml --build -d
+docker-compose -f "docker-compose.development.yml"  up -d --build
 ```
 
 コンテナが立ち上がったら django のセットアップを行います.
