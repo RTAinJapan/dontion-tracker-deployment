@@ -46,3 +46,9 @@ docker-compose exec gunicorn python manage.py migrate
 # 管理ユーザ作成
 docker-compose exec gunicorn python manage.py createsuperuser
 ```
+
+以下の URL で donation tracker が見れるようになります.
+
+- http://localhost:8080
+- http://localhost:8080/admin
+  - 管理画面には `createsuperuser` で作成したアカウントでログインできます.
