@@ -31,6 +31,18 @@ docker-compose up -f docker-compose.yml --build -d
 cp .env.development .env
 ```
 
+.env の `APP_SECRET` には https://djecrety.ir/ などで生成した文字列を設定してください.
+
 ```sh
 docker-compose up -f docker-compose.development.yml --build -d
+```
+
+コンテナが立ち上がったら django のセットアップを行います.
+
+```sh
+# DBテーブルのマイグレーション
+docker-compose exec gunicorn python manage.py migrate
+
+# 管理ユーザ作成
+docker-compose exec gunicorn python manage.py createsuperuser
 ```
